@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <style>
+      body {
+        background : skyblue;
+        color : white;
+        text-align : center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h3>Hello World!</h3>
+    <button onclick='window.location.replace("http://localhost:80/sendfile")'>add a new photo</button>
+    <p id="resp"></p>
+
+    <%for (var i = 0; i < photos.length; i++){%>
+      <img src='<%= photos[i].file + photos[i].filetype %>'>
+      <p id="rating<%=photos[i].file%>"><%=photos[i].rating%></p>
+      <button onclick="upvote(<%=photos[i].file%>)">upvote</button>
+      <button onclick='downvote(<%=photos[i].file%>)'>downvote</button><br>
+    <% } %>
+
+    <script src="serverInteract.js"></script>
+  </body>
+
+</html>
+

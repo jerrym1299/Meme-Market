@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+
+<html>
+
+  <body>
+    <form method="post" enctype='multipart/form-data' action='/sendfile'>
+      <input type="file" name="file"> <br>
+      <button>submit</button>
+    </form>
+  </body>
+
+</html>
+
